@@ -76,7 +76,7 @@
 	<distributionManagement>
   		<snapshotRepository>
     			<id>nexus</id>
-    			<url>http://13.233.56.178:8081/nexus/content/repositories/snapshots</url>
+    			<url>http://13.59.52.157:8081/nexus/content/repositories/snapshots</url>
   		</snapshotRepository>
 	</distributionManagement>
 
@@ -113,4 +113,24 @@
 			</plugin>
 		</plugins>
 	</build>
+	<profiles>
+    <profile>
+        <id>dev</id>
+        <properties>
+            <spring.profiles.active>dev</spring.profiles.active>
+        </properties>
+    </profile>
+    <profile>
+        <id>uat</id>
+        <properties>
+            <spring.profiles.active>uat</spring.profiles.active>
+        </properties>
+    </profile>
+    <profile>
+	    <id>sit</id>
+	    <properties>
+		    <spring.profiles.active>sit</spring.profiles.active>
+	    </properties>
+    </profile>
+</profiles>
 </project>
